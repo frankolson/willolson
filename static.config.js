@@ -1,11 +1,13 @@
-import axios from 'axios'
+// Project Assets
+import * as api from './utils/api'
 
 export default {
   getSiteProps: () => ({
     title: 'React Static',
   }),
   getRoutes: async () => {
-    const { data: posts } = await axios.get('https://jsonplaceholder.typicode.com/posts')
+    await api.initClient()
+    const posts = await api.getPosts()
     return [
       {
         path: '/',
@@ -22,7 +24,7 @@ export default {
           posts,
         }),
         children: posts.map(post => ({
-          path: `/post/${post.id}`,
+          path: `/post/${post.slug}`,
           component: 'src/containers/Post',
           getProps: () => ({
             post,
