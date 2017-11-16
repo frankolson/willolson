@@ -1,11 +1,19 @@
 // Vendor Assets
 import React from 'react'
-import { Link } from 'react-static'
+import styled from 'styled-components'
+
+// Project Assets
+import Navlink from '../elements/Navlink'
+
+const Nav = styled.nav`
+  width: 100%;
+  background: #108db8;
+`
 
 export default () => (
-  <nav>
-    <Link to="/">Home</Link>
-    <Link to="/about">About</Link>
-    <Link to="/blog">Blog</Link>
-  </nav>
+  <Nav>
+    <Navlink to="/">Home</Navlink>
+    <Navlink to="/about">About</Navlink>
+    <Navlink to="/blog">Blog</Navlink>
+  </Nav>
 )

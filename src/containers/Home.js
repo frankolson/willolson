@@ -1,6 +1,8 @@
+// Vendor Assets
 import React from 'react'
 import { getSiteProps } from 'react-static'
-//
+
+// Project Assets
 import logoImg from '../logo.png'
 
 export default getSiteProps(() => (

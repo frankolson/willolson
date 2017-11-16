@@ -1,7 +1,9 @@
-
+// Vendor Assets
 import React from 'react'
-import { getRouteProps, Link } from 'react-static'
-//
+import { getRouteProps } from 'react-static'
+
+// Project Assets
+import Link from '../elements/Link'
 
 export default getRouteProps(({ posts }) => (
   <div>
