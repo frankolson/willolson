@@ -2,6 +2,7 @@
 import React from 'react'
 import { getRouteProps } from 'react-static'
 import styled from 'styled-components'
+import moment from 'moment'
 
 // Project Assets
 import Card from '../elements/Card'
@@ -27,6 +28,11 @@ export default getRouteProps(({ posts }) => (
     {posts.map(post => (
       <Post key={post.slug}>
         {post.body}
+
+        <br />
+        <br />
+
+        Created at: {moment(post.createdAt).format('MM/DD/YYYY')}
       </Post>
     ))}
   </div>

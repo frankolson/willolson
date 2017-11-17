@@ -25,7 +25,10 @@ export const getPosts = () => (
     content_type: 'post',
   }).then(payload => (
     payload.items.reduce((arr, cur) => {
-      arr.push({ ...cur.fields })
+      arr.push({
+        ...cur.fields,
+        createdAt: cur.sys.createdAt,
+      })
       return arr
     }, [])
   ))
