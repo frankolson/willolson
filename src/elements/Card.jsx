@@ -9,7 +9,7 @@ const Card = styled.div`
   background: ${white};
   border-radius: 0.25rem;
   width: 100%;
-  padding: 1.25rem:
+  padding: 1rem;
 `
 
 export default ({ children, ...rest }) => (
