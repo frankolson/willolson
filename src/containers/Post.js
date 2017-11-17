@@ -1,14 +1,32 @@
 // Vendor Assets
-import React from 'react'
-import { getRouteProps } from 'react-static'
+import React, { PureComponent } from 'react'
+import styled from 'styled-components'
+import moment from 'moment'
 
 // Project Assets
-import Link from '../elements/Link'
+import Card from '../elements/Card'
 
-export default getRouteProps(({ post }) => (
-  <div>
-    <Link to="/blog/">{'<'} Back</Link>
-    <br />
-    <p>{post.body}</p>
-  </div>
-))
+const Div = styled(Card)`
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+`
+
+class Post extends PureComponent {
+  render () {
+    const { post } = this.props
+
+    return (
+      <Div key={post.slug}>
+        {post.body}
+
+        <br />
+        <br />
+
+        Created at: {moment(post.createdAt).format('MM/DD/YYYY')}
+      </Div>
+    )
+  }
+}
+
+export default Post
