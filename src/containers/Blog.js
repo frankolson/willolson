@@ -4,6 +4,7 @@ import { getRouteProps } from 'react-static'
 import styled from 'styled-components'
 
 // Project Assets
+import ProfilePicture from '../elements/ProfilePicture'
 import Post from './Post'
 import { white } from '../../utils/colors'
 
@@ -14,6 +15,8 @@ const BlogHeader = styled.div`
 
 export default getRouteProps(({ posts }) => (
   <div className="container">
+    <ProfilePicture />
+
     <BlogHeader>
       <h1>It's blog time.</h1>
     </BlogHeader>
