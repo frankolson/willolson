@@ -27,13 +27,6 @@ export default {
         getProps: () => ({
           posts,
         }),
-        children: posts.map(post => ({
-          path: `/post/${post.slug}`,
-          component: 'src/containers/Post',
-          getProps: () => ({
-            post,
-          }),
-        })),
       },
       {
         is404: true,
