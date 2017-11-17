@@ -1,6 +1,7 @@
 // Vendor Assets
 import React, { PureComponent } from 'react'
 import styled from 'styled-components'
+import marked from 'marked'
 import moment from 'moment'
 
 // Project Assets
@@ -13,12 +14,17 @@ const Div = styled(Card)`
 `
 
 class Post extends PureComponent {
+  rawMarkup = () => {
+    const rawMarkup = marked(this.props.post.body, { sanitize: true })
+    return { __html: rawMarkup }
+  }
+
   render () {
     const { post } = this.props
 
     return (
       <Div key={post.slug}>
-        {post.body}
+        <span dangerouslySetInnerHTML={this.rawMarkup()} />
 
         <br />
         <br />
