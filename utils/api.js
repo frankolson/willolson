@@ -4,6 +4,15 @@ import { createClient } from 'contentful'
 let client
 let authorized
 
+const sortPosts = (a, b) => {
+  if (a.createdAt < b.createdAt) {
+    return 1
+  } else if (a.createdAt > b.createdAt) {
+    return -1
+  }
+  return 0
+}
+
 export function initClient () {
   client = createClient({
     space: 'hxov0fjpwrnp',
@@ -30,6 +39,6 @@ export const getPosts = () => (
         createdAt: cur.sys.createdAt,
       })
       return arr
-    }, [])
+    }, []).sort(sortPosts)
   ))
 )
