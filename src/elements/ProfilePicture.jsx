@@ -7,7 +7,7 @@ import profileImg from '../headshot.jpg'
 import { white } from '../../utils/colors'
 
 const RoundImage = styled.img`
-  border: 8px solid ${white};
+  border: 7px solid ${white};
   border-radius: 50%;
   width: 200px;
   height: auto;
