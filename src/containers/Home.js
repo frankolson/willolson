@@ -6,17 +6,17 @@ import styled from 'styled-components'
 // Project Assets
 import Card from '../elements/Card'
 import logoImg from '../logo.png'
-import { black } from '../../utils/colors'
 
-const CardHeader = styled.h1`
-  color: ${black}
+const HomeHeader = styled.div`
   text-align: center;
 `
 
 export default getSiteProps(() => (
   <div className="container">
     <Card>
-      <CardHeader>Welcome to</CardHeader>
+      <HomeHeader>
+        <h1>Welcome to</h1>
+      </HomeHeader>
       <img src={logoImg} alt="" />
     </Card>
   </div>
