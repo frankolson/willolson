@@ -13,8 +13,8 @@ const BlogHeader = styled.div`
 `
 
 const Post = styled(Card)`
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   padding: 2rem;
 `
 

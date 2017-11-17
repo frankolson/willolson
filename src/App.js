@@ -26,23 +26,15 @@ const AppStyles = styled.div`
   }
 
   .content {
-    padding: 16px;
     display: flex;
     flex: 1;
+    justify-content: center;
+    padding: 1rem;
   }
 
   .container {
     width: 100%;
-  }
-
-  @media only screen and (min-width: 900px) {
-    .content {
-      justify-content: center;
-    }
-
-    .container {
-      width: 868px;
-    }
+    max-width: 700px;
   }
 `
 

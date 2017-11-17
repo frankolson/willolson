@@ -8,7 +8,6 @@ import { white } from '../../utils/colors'
 const Card = styled.div`
   background: ${white};
   border-radius: 0.25rem;
-  width: 100%;
   padding: 1rem;
 `
 
