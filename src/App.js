@@ -6,7 +6,7 @@ import styled, { injectGlobal } from 'styled-components'
 
 // Project Assets
 import Navbar from './components/Navbar'
-import { primaryDark } from '../utils/colors'
+import { primaryDark, white } from '../utils/colors'
 
 injectGlobal`
   body {
@@ -17,6 +17,7 @@ injectGlobal`
     margin: 0;
     padding: 0;
     background: ${primaryDark};
+    color: ${white}
   }
 `
 
