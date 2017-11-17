@@ -7,10 +7,11 @@ import profileImg from '../headshot.jpg'
 import { white } from '../../utils/colors'
 
 const RoundImage = styled.img`
-  border: 10px solid ${white};
+  border: 8px solid ${white};
   border-radius: 50%;
-  width: 250px;
+  width: 200px;
   height: auto;
+  margin-bottom: 30px;
 `
 
 export default () => (
