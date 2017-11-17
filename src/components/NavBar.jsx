@@ -7,7 +7,6 @@ import Navlink from '../elements/Navlink'
 
 const Nav = styled.nav`
   width: 100%;
-  background: #108db8;
 `
 
 export default () => (
