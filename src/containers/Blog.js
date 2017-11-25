@@ -10,6 +10,7 @@ import { white } from '../../utils/colors'
 
 const BlogHeader = styled.div`
   text-align: center;
+  color: ${white};
 `
 
 export default getRouteProps(({ posts }) => (
