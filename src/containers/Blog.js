@@ -5,7 +5,7 @@ import styled from 'styled-components'
 
 // Project Assets
 import ProfilePicture from '../elements/ProfilePicture'
-import Post from './Post'
+import Post from '../components/Post'
 import { white } from '../../utils/colors'
 
 const BlogHeader = styled.h1`
