@@ -6,10 +6,11 @@ import styled from 'styled-components'
 import ProfilePicture from '../elements/ProfilePicture'
 import { white } from '../../utils/colors'
 
-const AboutHeader = styled.h2`
+const AboutHeader = styled.h1`
   color: ${white};
 `
 const AboutDescription = styled.p`
+  font-size: 24px;
   color: ${white};
 `
 
@@ -17,10 +18,11 @@ export default () => (
   <div className="container">
     <ProfilePicture />
 
-    <AboutHeader>This is what I'm all about.</AboutHeader>
+    <AboutHeader>Hi, I'm Will.</AboutHeader>
 
     <AboutDescription>
-      React, static sites, performance, speed. It's the stuff that makes us tick.
+      I am a Full-Stack Developer with a special love for startups.
+      Want to check out my resume? Well, here you go:
     </AboutDescription>
   </div>
 )
