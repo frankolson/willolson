@@ -9,7 +9,6 @@ import Post from './Post'
 import { white } from '../../utils/colors'
 
 const BlogHeader = styled.div`
-  color: ${white};
   text-align: center;
 `
 

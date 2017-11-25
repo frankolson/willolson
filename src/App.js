@@ -6,7 +6,6 @@ import styled, { injectGlobal } from 'styled-components'
 
 // Project Assets
 import Navbar from './components/Navbar'
-import { primaryDark } from '../utils/colors'
 
 injectGlobal`
   body {
@@ -16,7 +15,6 @@ injectGlobal`
     font-size: 16px;
     margin: 0;
     padding: 0;
-    background: ${primaryDark};
   }
 `
 
