@@ -4,11 +4,10 @@ import styled from 'styled-components'
 
 // Project Assets
 import profileImg from '../headshot.jpg'
-import { white } from '../../utils/colors'
 
 const RoundImage = styled.img`
-  border: 7px solid ${white};
   border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   width: 200px;
   height: auto;
   margin-bottom: 30px;
