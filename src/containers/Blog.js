@@ -18,7 +18,7 @@ export default getRouteProps(({ posts }) => (
     <ProfilePicture />
 
     <BlogHeader>
-      <h1>It's blog time.</h1>
+      <h2>It's blog time.</h2>
     </BlogHeader>
 
     {posts.map(post => (
