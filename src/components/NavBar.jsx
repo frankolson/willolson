@@ -12,7 +12,7 @@ const Nav = styled.nav`
 export default () => (
   <Nav>
     <Navlink to="/">Home</Navlink>
-    <Navlink to="/about">About</Navlink>
+    <Navlink to="/resume">Resume</Navlink>
     <Navlink to="/blog">Blog</Navlink>
   </Nav>
 )

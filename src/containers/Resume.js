@@ -18,10 +18,10 @@ export default () => (
   <div className="container">
     <ProfilePicture />
 
-    <AboutHeader>About</AboutHeader>
+    <AboutHeader>Want to check out my resume?</AboutHeader>
 
     <AboutDescription>
-      Want to check out my resume? Well, here you go:
+      Well, here you go:
     </AboutDescription>
   </div>
 )

@@ -18,8 +18,8 @@ export default {
         component: 'src/containers/Home',
       },
       {
-        path: '/about',
-        component: 'src/containers/About',
+        path: '/resume',
+        component: 'src/containers/Resume',
       },
       {
         path: '/blog',
