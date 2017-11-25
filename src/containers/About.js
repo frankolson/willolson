@@ -18,10 +18,9 @@ export default () => (
   <div className="container">
     <ProfilePicture />
 
-    <AboutHeader>Hi, I'm Will.</AboutHeader>
+    <AboutHeader>About</AboutHeader>
 
     <AboutDescription>
-      I am a Full-Stack Developer with a special love for startups.
       Want to check out my resume? Well, here you go:
     </AboutDescription>
   </div>
