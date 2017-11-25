@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 // Project Assets
+import Container from '../elements/Container'
 import ProfilePicture from '../elements/ProfilePicture'
 import { white } from '../../utils/colors'
 
@@ -15,7 +16,7 @@ const AboutDescription = styled.p`
 `
 
 export default () => (
-  <div className="container">
+  <Container>
     <ProfilePicture />
 
     <AboutHeader>Want to check out my resume?</AboutHeader>
@@ -23,5 +24,5 @@ export default () => (
     <AboutDescription>
       Well, here you go:
     </AboutDescription>
-  </div>
+  </Container>
 )

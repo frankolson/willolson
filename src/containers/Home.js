@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 // Project Assets
 import Card from '../elements/Card'
+import Container from '../elements/Container'
 import ProfilePicture from '../elements/ProfilePicture'
 import logoImg from '../logo.png'
 import { white } from '../../utils/colors'
@@ -20,7 +21,7 @@ const HomeDescription = styled.p`
 `
 
 export default getSiteProps(() => (
-  <div className="container">
+  <Container>
     <ProfilePicture />
 
     <HomeHeader>Hi, I'm Will</HomeHeader>
@@ -36,5 +37,5 @@ export default getSiteProps(() => (
     <Card>
       <img src={logoImg} alt="" />
     </Card>
-  </div>
+  </Container>
 ))

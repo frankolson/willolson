@@ -31,15 +31,6 @@ const AppStyles = styled.div`
     justify-content: center;
     padding: 1rem;
   }
-
-  .container {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    align-items: center;
-    width: 100%;
-    max-width: 700px;
-  }
 `
 
 export default () => (
