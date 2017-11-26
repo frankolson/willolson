@@ -1,8 +1,20 @@
 // Vendor Assets
 import React from 'react'
+import styled from 'styled-components'
+
+// Project Assets
+import Container from '../elements/Container'
+import { white } from '../../utils/colors'
+
+const MissingHeader = styled.p`
+  font-size: 2rem;
+  color: ${white};
+`
 
 export default () => (
-  <div>
-    <h1>404 - Oh no's! We couldn't find that page :(</h1>
-  </div>
+  <Container>
+    <MissingHeader>
+      404 - Oh no's! We couldn't find that page :(
+    </MissingHeader>
+  </Container>
 )
