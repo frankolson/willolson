@@ -8,7 +8,7 @@ const Container = styled.div`
   flex: 1;
   align-items: center;
   width: 100%;
-  max-width: 700px;
+  max-width: 900px;
 `
 
 export default ({ children, ...rest }) => (
