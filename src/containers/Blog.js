@@ -9,7 +9,8 @@ import ProfilePicture from '../elements/ProfilePicture'
 import Post from '../components/Post'
 import { white } from '../../utils/colors'
 
-const BlogHeader = styled.h1`
+const BlogHeader = styled.p`
+  font-size: 2rem;
   color: ${white};
 `
 
@@ -17,7 +18,7 @@ export default getRouteProps(({ posts }) => (
   <Container>
     <ProfilePicture />
 
-    <BlogHeader>It's blog time.</BlogHeader>
+    <BlogHeader>It's blogging time.</BlogHeader>
 
     {posts.map(post => (
       <Post key={post.slug} post={post} />
