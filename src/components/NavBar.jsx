@@ -13,6 +13,5 @@ export default () => (
   <Nav>
     <Navlink to="/" exact>Home</Navlink>
     <Navlink to="/resume">Resume</Navlink>
-    <Navlink to="/blog">Blog</Navlink>
   </Nav>
 )

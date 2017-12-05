@@ -4,15 +4,6 @@ import { createClient } from 'contentful'
 let client
 let authorized
 
-const sortPosts = (a, b) => {
-  if (a.createdAt < b.createdAt) {
-    return 1
-  } else if (a.createdAt > b.createdAt) {
-    return -1
-  }
-  return 0
-}
-
 export function initClient () {
   client = createClient({
     space: 'hxov0fjpwrnp',
@@ -27,18 +18,4 @@ export function initClient () {
 
 export const getClient = () => (
   authorized && client
-)
-
-export const getPosts = () => (
-  getClient().getEntries({
-    content_type: 'post',
-  }).then(payload => (
-    payload.items.reduce((arr, cur) => {
-      arr.push({
-        ...cur.fields,
-        createdAt: cur.sys.createdAt,
-      })
-      return arr
-    }, []).sort(sortPosts)
-  ))
 )

@@ -5,7 +5,7 @@ import Routes from 'react-static-routes'
 import styled, { injectGlobal } from 'styled-components'
 
 // Project Assets
-import Navbar from './components/Navbar'
+import Navbar from './components/NavBar'
 import { primary } from '../utils/colors'
 
 injectGlobal`

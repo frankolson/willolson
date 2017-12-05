@@ -11,7 +11,6 @@ export default {
   }),
   getRoutes: async () => {
     await api.initClient()
-    const posts = await api.getPosts()
     return [
       {
         path: '/',
@@ -20,13 +19,6 @@ export default {
       {
         path: '/resume',
         component: 'src/containers/Resume',
-      },
-      {
-        path: '/blog',
-        component: 'src/containers/Blog',
-        getProps: () => ({
-          posts,
-        }),
       },
       {
         is404: true,
