@@ -22,6 +22,32 @@ const placeholderData = {
     { title: 'Databases', items: [1, 2, 3, 4, 5] },
     { title: 'Other', items: [1, 2, 3, 4, 5] },
   ],
+  projects: [
+    {
+      title: 'project3',
+      link: 'https://example3.com',
+      description: 'guess what? `Even more markdown!!!`',
+      startDate: '3/1/1',
+      endDate: null,
+      present: true,
+    },
+    {
+      title: 'project2',
+      link: 'https://example2.com',
+      description: 'some more `markdown`',
+      startDate: '2/1/1',
+      endDate: '2/2/1',
+      present: false,
+    },
+    {
+      title: 'project1',
+      link: 'https://example1.com',
+      description: 'some `markdown`',
+      startDate: '1/1/1',
+      endDate: '1/2/1',
+      present: false,
+    },
+  ],
 }
 
 export default () => (
