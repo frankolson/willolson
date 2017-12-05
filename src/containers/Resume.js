@@ -4,6 +4,7 @@ import styled from 'styled-components'
 
 // Project Assets
 import Section from '../components/Resume/Section'
+import Skill from '../components/Resume/Skill'
 import Card from '../elements/Card'
 import Container from '../elements/Container'
 import ProfilePicture from '../elements/ProfilePicture'
@@ -14,6 +15,15 @@ const ResumeHeader = styled.p`
   color: ${white};
 `
 
+const placeholderData = {
+  skills: [
+    { title: 'Languages', items: [1, 2, 3, 4, 5] },
+    { title: 'Frameworks/Libraries', items: [1, 2, 3, 4, 5] },
+    { title: 'Databases', items: [1, 2, 3, 4, 5] },
+    { title: 'Other', items: [1, 2, 3, 4, 5] },
+  ],
+}
+
 export default () => (
   <Container>
     <ProfilePicture />
@@ -23,8 +33,10 @@ export default () => (
     </ResumeHeader>
 
     <Card>
-      <Section title="Languages">
-        Some stuff
+      <Section title="Skills">
+        {placeholderData.skills.map(data => (
+          <Skill {...data} />
+        ))}
       </Section>
     </Card>
   </Container>

@@ -2,7 +2,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Section = styled.div`
+const Skill = styled.div`
   display: flex;
   flex: 1;
 
@@ -13,21 +13,22 @@ const Section = styled.div`
 
 const Title = styled.div`
   display: flex;
-  flex: 1;
+  flex: 2;
 `
 
-const Children = styled.div`
+const Content = styled.div`
   display: flex;
-  flex-direction: column;
   flex: 3;
 `
 
-export default ({ children, title }) => (
-  <Section>
-    <Title>{title}</Title>
+export default ({ items, title }) => (
+  <Skill>
+    <Title>
+      <b>{title}:</b>
+    </Title>
 
-    <Children>
-      {children}
-    </Children>
-  </Section>
+    <Content>
+      {items.join(', ')}
+    </Content>
+  </Skill>
 )
