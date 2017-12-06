@@ -76,7 +76,7 @@ const placeholderData = {
       description: 'job desciption 2',
       startDate: '2/1/1',
       endDate: '2/2/1',
-      present: true,
+      present: false,
     },
     {
       id: 1,
@@ -85,7 +85,33 @@ const placeholderData = {
       description: 'job desciption 1',
       startDate: '1/1/1',
       endDate: '1/2/1',
+      present: false,
+    },
+  ],
+  education: [
+    {
+      id: 3,
+      degree: 'degree3',
+      school: 'school 3',
+      startDate: '3/1/1',
+      endDate: null,
       present: true,
+    },
+    {
+      id: 2,
+      degree: 'degree2',
+      school: 'school 2',
+      startDate: '2/1/1',
+      endDate: '2/2/1',
+      present: false,
+    },
+    {
+      id: 1,
+      degree: 'degree1',
+      school: 'school 1',
+      startDate: '1/1/1',
+      endDate: '1/2/1',
+      present: false,
     },
   ],
 }
