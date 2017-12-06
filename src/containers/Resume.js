@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 // Project Assets
+import Education from '../components/Resume/Education'
 import Experience from '../components/Resume/Experience'
 import Project from '../components/Resume/Project'
 import Section from '../components/Resume/Section'
@@ -88,7 +89,7 @@ const placeholderData = {
       present: false,
     },
   ],
-  education: [
+  educations: [
     {
       id: 3,
       degree: 'degree3',
@@ -144,6 +145,14 @@ export default () => (
       <Section title="Experiences">
         {placeholderData.experiences.map(data => (
           <Experience key={data.id} {...data} />
+        ))}
+      </Section>
+
+      <Hr />
+
+      <Section title="Education">
+        {placeholderData.educations.map(data => (
+          <Education key={data.id} {...data} />
         ))}
       </Section>
     </Card>
