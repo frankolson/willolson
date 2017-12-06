@@ -58,6 +58,35 @@ const placeholderData = {
       present: false,
     },
   ],
+  experiences: [
+    {
+      id: 3,
+      positon: 'position3',
+      company: 'company 3',
+      description: 'job desciption 3',
+      startDate: '3/1/1',
+      endDate: null,
+      present: true,
+    },
+    {
+      id: 2,
+      positon: 'position2',
+      company: 'company 2',
+      description: 'job desciption 2',
+      startDate: '2/1/1',
+      endDate: '2/2/1',
+      present: true,
+    },
+    {
+      id: 1,
+      positon: 'position1',
+      company: 'company 1',
+      description: 'job desciption 1',
+      startDate: '1/1/1',
+      endDate: '1/2/1',
+      present: true,
+    },
+  ],
 }
 
 export default () => (
