@@ -11,6 +11,7 @@ export default {
   }),
   getRoutes: async () => {
     await api.initClient()
+    const skills = await api.getSkills()
     return [
       {
         path: '/',
@@ -19,6 +20,9 @@ export default {
       {
         path: '/resume',
         component: 'src/containers/Resume',
+        getProps: () => ({
+          skills,
+        }),
       },
       {
         is404: true,

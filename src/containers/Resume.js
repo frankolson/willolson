@@ -1,5 +1,6 @@
 // Vendor Assets
 import React from 'react'
+import { getRouteProps } from 'react-static'
 import styled from 'styled-components'
 
 // Project Assets
@@ -117,7 +118,7 @@ const placeholderData = {
   ],
 }
 
-export default () => (
+export default getRouteProps(({ skills }) => (
   <Container>
     <ProfilePicture />
 
@@ -127,7 +128,7 @@ export default () => (
 
     <Card>
       <Section title="Skills">
-        {placeholderData.skills.map(data => (
+        {skills.map(data => (
           <Skill key={data.id} {...data} />
         ))}
       </Section>
@@ -157,4 +158,4 @@ export default () => (
       </Section>
     </Card>
   </Container>
-)
+))
