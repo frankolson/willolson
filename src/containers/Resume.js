@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 // Project Assets
+import Project from '../components/Resume/Project'
 import Section from '../components/Resume/Section'
 import Skill from '../components/Resume/Skill'
 import Card from '../elements/Card'
@@ -15,15 +16,22 @@ const ResumeHeader = styled.p`
   color: ${white};
 `
 
+const Hr = styled.hr`
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0.5px solid grey;
+`
+
 const placeholderData = {
   skills: [
-    { title: 'Languages', items: [1, 2, 3, 4, 5] },
-    { title: 'Frameworks/Libraries', items: [1, 2, 3, 4, 5] },
-    { title: 'Databases', items: [1, 2, 3, 4, 5] },
-    { title: 'Other', items: [1, 2, 3, 4, 5] },
+    { id: 1, title: 'Languages', items: [1, 2, 3, 4, 5] },
+    { id: 2, title: 'Frameworks/Libraries', items: [1, 2, 3, 4, 5] },
+    { id: 3, title: 'Databases', items: [1, 2, 3, 4, 5] },
+    { id: 4, title: 'Other', items: [1, 2, 3, 4, 5] },
   ],
   projects: [
     {
+      id: 3,
       title: 'project3',
       link: 'https://example3.com',
       description: 'guess what? `Even more markdown!!!`',
@@ -32,6 +40,7 @@ const placeholderData = {
       present: true,
     },
     {
+      id: 2,
       title: 'project2',
       link: 'https://example2.com',
       description: 'some more `markdown`',
@@ -40,6 +49,7 @@ const placeholderData = {
       present: false,
     },
     {
+      id: 1,
       title: 'project1',
       link: 'https://example1.com',
       description: 'some `markdown`',
@@ -61,7 +71,15 @@ export default () => (
     <Card>
       <Section title="Skills">
         {placeholderData.skills.map(data => (
-          <Skill {...data} />
+          <Skill key={data.id} {...data} />
+        ))}
+      </Section>
+
+      <Hr />
+
+      <Section title="Projects">
+        {placeholderData.projects.map(data => (
+          <Project key={data.id} {...data} />
         ))}
       </Section>
     </Card>
