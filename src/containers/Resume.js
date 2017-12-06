@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 // Project Assets
+import Experience from '../components/Resume/Experience'
 import Project from '../components/Resume/Project'
 import Section from '../components/Resume/Section'
 import Skill from '../components/Resume/Skill'
@@ -109,6 +110,14 @@ export default () => (
       <Section title="Projects">
         {placeholderData.projects.map(data => (
           <Project key={data.id} {...data} />
+        ))}
+      </Section>
+
+      <Hr />
+
+      <Section title="Experiences">
+        {placeholderData.experiences.map(data => (
+          <Experience key={data.id} {...data} />
         ))}
       </Section>
     </Card>
