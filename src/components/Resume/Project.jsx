@@ -3,17 +3,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 // Project Assets
+import ContentRow from './ContentRow'
 import DateRange from '../../elements/DateRange'
 import Markdown from '../../elements/Markdown'
-
-const Project = styled.div`
-  display: flex;
-  flex: 1;
-
-  @media (max-width: 500px) {
-    display: block;
-  }
-`
 
 const Content = styled.div`
   display: flex;
@@ -33,12 +25,11 @@ const DateBlock = styled.div`
 
   @media (max-width: 500px) {
     justify-content: flex-start;
-    margin-bottom: 1rem;
   }
 `
 
 export default ({ title, github, description, startDate, endDate, present }) => (
-  <Project>
+  <ContentRow>
     <Content>
       <Title>
         <b>{title}</b> ~ <a href={github}>GitHub</a>
@@ -54,7 +45,7 @@ export default ({ title, github, description, startDate, endDate, present }) => 
         startDate={startDate}
       />
     </DateBlock>
-  </Project>
+  </ContentRow>
 )
 
 

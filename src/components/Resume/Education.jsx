@@ -3,16 +3,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 // Project Assets
+import ContentRow from './ContentRow'
 import DateRange from '../../elements/DateRange'
-
-const Experience = styled.div`
-  display: flex;
-  flex: 1;
-
-  @media (max-width: 500px) {
-    display: block;
-  }
-`
 
 const Content = styled.div`
   display: flex;
@@ -38,7 +30,7 @@ const DateBlock = styled.div`
 `
 
 export default ({ degree, school, startDate, endDate, present }) => (
-  <Experience>
+  <ContentRow>
     <Content>
       <Title>
         <div><b>{degree}</b></div>
@@ -53,7 +45,7 @@ export default ({ degree, school, startDate, endDate, present }) => (
         startDate={startDate}
       />
     </DateBlock>
-  </Experience>
+  </ContentRow>
 )
 
 

@@ -3,17 +3,9 @@ import React from 'react'
 import styled from 'styled-components'
 
 // Project Assets
+import ContentRow from './ContentRow'
 import DateRange from '../../elements/DateRange'
 import Markdown from '../../elements/Markdown'
-
-const Experience = styled.div`
-  display: flex;
-  flex: 1;
-
-  @media (max-width: 500px) {
-    display: block;
-  }
-`
 
 const Content = styled.div`
   display: flex;
@@ -39,7 +31,7 @@ const DateBlock = styled.div`
 `
 
 export default ({ position, company, description, startDate, endDate, present }) => (
-  <Experience>
+  <ContentRow>
     <Content>
       <Title>
         <div><b>{position}</b></div>
@@ -56,7 +48,7 @@ export default ({ position, company, description, startDate, endDate, present })
         startDate={startDate}
       />
     </DateBlock>
-  </Experience>
+  </ContentRow>
 )
 
 
