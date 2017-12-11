@@ -4,12 +4,26 @@ import styled from 'styled-components'
 import marked from 'marked'
 
 const Div = styled.div`
+  overflow: auto;
+
   code {
     padding: 0.2em 0.4em;
     margin: 0;
     font-size: 85%;
     background-color: rgba(27,31,35,0.05);
     border-radius: 3px;
+  }
+`
+
+const Span = styled.span`
+  > * {
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 `
 
@@ -22,7 +36,7 @@ class Markdown extends PureComponent {
   render () {
     return (
       <Div>
-        <span dangerouslySetInnerHTML={this.rawMarkup()} />
+        <Span dangerouslySetInnerHTML={this.rawMarkup()} />
       </Div>
     )
   }
