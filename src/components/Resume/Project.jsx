@@ -35,7 +35,7 @@ export default ({ title, github, description, startDate, endDate, present }) => 
         <b>{title}</b> ~ <a href={github}>GitHub</a>
       </Title>
 
-      <Markdown content={description} />
+      <Markdown color={'grey'} content={description} />
     </Content>
 
     <DateBlock>

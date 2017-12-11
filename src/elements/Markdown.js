@@ -16,6 +16,10 @@ const Div = styled.div`
 `
 
 const Span = styled.span`
+  color: ${props => (
+    props.color ? props.color : 'inherit'
+  )};
+
   > * {
     &:first-child {
       margin-top: 0;
@@ -36,7 +40,10 @@ class Markdown extends PureComponent {
   render () {
     return (
       <Div>
-        <Span dangerouslySetInnerHTML={this.rawMarkup()} />
+        <Span
+          color={this.props.color}
+          dangerouslySetInnerHTML={this.rawMarkup()}
+        />
       </Div>
     )
   }

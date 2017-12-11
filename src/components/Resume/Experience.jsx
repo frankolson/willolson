@@ -38,7 +38,7 @@ export default ({ position, company, description, startDate, endDate, present })
         <div>{company}</div>
       </Title>
 
-      <Markdown content={description} />
+      <Markdown color={'grey'} content={description} />
     </Content>
 
     <DateBlock>
