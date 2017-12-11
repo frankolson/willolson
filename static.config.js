@@ -11,8 +11,8 @@ export default {
   }),
   getRoutes: async () => {
     await api.initClient()
-    const projects = await api.getProjects()
-    const skills = await api.getSkills()
+    const projects = await api.getStuff('projects', api.sortByStartDate)
+    const skills = await api.getStuff('skills')
     return [
       {
         path: '/',

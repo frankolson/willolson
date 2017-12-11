@@ -38,28 +38,15 @@ export const getClient = () => (
   authorized && client
 )
 
-export const getProjects = () => (
+export const getStuff = (stuff, sortType) => (
   getClient().getEntries({
-    content_type: 'projects',
+    content_type: stuff,
   }).then(payload => (
     payload.items.reduce((arr, cur) => {
       arr.push({
         ...cur.fields,
       })
       return arr
-    }, []).sort(sortById)
-  ))
-)
-
-export const getSkills = () => (
-  getClient().getEntries({
-    content_type: 'skills',
-  }).then(payload => (
-    payload.items.reduce((arr, cur) => {
-      arr.push({
-        ...cur.fields,
-      })
-      return arr
-    }, []).sort(sortById)
+    }, []).sort(sortType || sortById)
   ))
 )
