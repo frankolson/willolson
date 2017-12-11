@@ -25,71 +25,7 @@ const Hr = styled.hr`
   border: 0.5px solid grey;
 `
 
-const placeholderData = {
-  skills: [
-    { id: 1, title: 'Languages', items: [1, 2, 3, 4, 5] },
-    { id: 2, title: 'Frameworks/Libraries', items: [1, 2, 3, 4, 5] },
-    { id: 3, title: 'Databases', items: [1, 2, 3, 4, 5] },
-    { id: 4, title: 'Other', items: [1, 2, 3, 4, 5] },
-  ],
-  experiences: [
-    {
-      id: 3,
-      positon: 'position3',
-      company: 'company 3',
-      description: 'job desciption 3',
-      startDate: '3/1/1',
-      endDate: null,
-      present: true,
-    },
-    {
-      id: 2,
-      positon: 'position2',
-      company: 'company 2',
-      description: 'job desciption 2',
-      startDate: '2/1/1',
-      endDate: '2/2/1',
-      present: false,
-    },
-    {
-      id: 1,
-      positon: 'position1',
-      company: 'company 1',
-      description: 'job desciption 1',
-      startDate: '1/1/1',
-      endDate: '1/2/1',
-      present: false,
-    },
-  ],
-  educations: [
-    {
-      id: 3,
-      degree: 'degree3',
-      school: 'school 3',
-      startDate: '3/1/1',
-      endDate: null,
-      present: true,
-    },
-    {
-      id: 2,
-      degree: 'degree2',
-      school: 'school 2',
-      startDate: '2/1/1',
-      endDate: '2/2/1',
-      present: false,
-    },
-    {
-      id: 1,
-      degree: 'degree1',
-      school: 'school 1',
-      startDate: '1/1/1',
-      endDate: '1/2/1',
-      present: false,
-    },
-  ],
-}
-
-export default getRouteProps(({ projects, skills }) => (
+export default getRouteProps(({ educations, experiences, projects, skills }) => (
   <Container>
     <ProfilePicture />
 
@@ -115,7 +51,7 @@ export default getRouteProps(({ projects, skills }) => (
       <Hr />
 
       <Section title="Experiences">
-        {placeholderData.experiences.map(data => (
+        {experiences.map(data => (
           <Experience key={data.id} {...data} />
         ))}
       </Section>
@@ -123,7 +59,7 @@ export default getRouteProps(({ projects, skills }) => (
       <Hr />
 
       <Section title="Education">
-        {placeholderData.educations.map(data => (
+        {educations.map(data => (
           <Education key={data.id} {...data} />
         ))}
       </Section>
