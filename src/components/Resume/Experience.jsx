@@ -37,11 +37,11 @@ const DateBlock = styled.div`
   }
 `
 
-export default ({ positon, company, description, startDate, endDate, present }) => (
+export default ({ position, company, description, startDate, endDate, present }) => (
   <Experience>
     <Content>
       <Title>
-        <div><b>{positon}</b></div>
+        <div><b>{position}</b></div>
         <div>{company}</div>
       </Title>
 
@@ -58,7 +58,7 @@ export default ({ positon, company, description, startDate, endDate, present }) 
 /*
 {
   id: 3,
-  positon: 'position3',
+  position: 'position3',
   company: 'company 3',
   description: 'job desciption 3',
   startDate: '3/1/1',
