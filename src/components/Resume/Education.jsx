@@ -2,6 +2,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// Project Assets
+import DateRange from '../../elements/DateRange'
+
 const Experience = styled.div`
   display: flex;
   flex: 1;
@@ -44,7 +47,11 @@ export default ({ degree, school, startDate, endDate, present }) => (
     </Content>
 
     <DateBlock>
-      {`${startDate} - ${present ? 'Present' : endDate}`}
+      <DateRange
+        endDate={endDate}
+        present={present}
+        startDate={startDate}
+      />
     </DateBlock>
   </Experience>
 )

@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 // Project Assets
+import DateRange from '../../elements/DateRange'
 import Markdown from '../../elements/Markdown'
 
 const Project = styled.div`
@@ -47,7 +48,11 @@ export default ({ title, github, description, startDate, endDate, present }) => 
     </Content>
 
     <DateBlock>
-      {`${startDate} - ${present ? 'Present' : endDate}`}
+      <DateRange
+        endDate={endDate}
+        present={present}
+        startDate={startDate}
+      />
     </DateBlock>
   </Project>
 )
