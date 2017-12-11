@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 // Project Assets
+import DateRange from '../../elements/DateRange'
 import Markdown from '../../elements/Markdown'
 
 const Experience = styled.div`
@@ -49,7 +50,11 @@ export default ({ position, company, description, startDate, endDate, present })
     </Content>
 
     <DateBlock>
-      {`${startDate} - ${present ? 'Present' : endDate}`}
+      <DateRange
+        endDate={endDate}
+        present={present}
+        startDate={startDate}
+      />
     </DateBlock>
   </Experience>
 )
