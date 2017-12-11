@@ -4,7 +4,7 @@ import { createClient } from 'contentful'
 let client
 let authorized
 
-const sortByStartDate = (a, b) => {
+export const sortByStartDate = (a, b) => {
   if (a.startDate < b.startDate) {
     return 1
   } else if (a.startDate > b.startDate) {
@@ -13,7 +13,7 @@ const sortByStartDate = (a, b) => {
   return 0
 }
 
-const sortById = (a, b) => {
+export const sortById = (a, b) => {
   if (a.id > b.id) {
     return 1
   } else if (a.id < b.id) {
