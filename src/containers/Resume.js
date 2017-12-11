@@ -32,35 +32,6 @@ const placeholderData = {
     { id: 3, title: 'Databases', items: [1, 2, 3, 4, 5] },
     { id: 4, title: 'Other', items: [1, 2, 3, 4, 5] },
   ],
-  projects: [
-    {
-      id: 3,
-      title: 'project3',
-      link: 'https://example3.com',
-      description: 'guess what? `Even more markdown!!!`',
-      startDate: '3/1/1',
-      endDate: null,
-      present: true,
-    },
-    {
-      id: 2,
-      title: 'project2',
-      link: 'https://example2.com',
-      description: 'some more `markdown`',
-      startDate: '2/1/1',
-      endDate: '2/2/1',
-      present: false,
-    },
-    {
-      id: 1,
-      title: 'project1',
-      link: 'https://example1.com',
-      description: 'some `markdown`',
-      startDate: '1/1/1',
-      endDate: '1/2/1',
-      present: false,
-    },
-  ],
   experiences: [
     {
       id: 3,
@@ -118,7 +89,7 @@ const placeholderData = {
   ],
 }
 
-export default getRouteProps(({ skills }) => (
+export default getRouteProps(({ projects, skills }) => (
   <Container>
     <ProfilePicture />
 
@@ -136,7 +107,7 @@ export default getRouteProps(({ skills }) => (
       <Hr />
 
       <Section title="Projects">
-        {placeholderData.projects.map(data => (
+        {projects.map(data => (
           <Project key={data.id} {...data} />
         ))}
       </Section>

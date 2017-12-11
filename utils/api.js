@@ -4,6 +4,14 @@ import { createClient } from 'contentful'
 let client
 let authorized
 
+const sortByStartDate = (a, b) => {
+  if (a.startDate < b.startDate) {
+    return 1
+  } else if (a.startDate > b.startDate) {
+    return -1
+  }
+  return 0
+}
 
 const sortById = (a, b) => {
   if (a.id > b.id) {
@@ -28,6 +36,19 @@ export function initClient () {
 
 export const getClient = () => (
   authorized && client
+)
+
+export const getProjects = () => (
+  getClient().getEntries({
+    content_type: 'projects',
+  }).then(payload => (
+    payload.items.reduce((arr, cur) => {
+      arr.push({
+        ...cur.fields,
+      })
+      return arr
+    }, []).sort(sortById)
+  ))
 )
 
 export const getSkills = () => (

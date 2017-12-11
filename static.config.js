@@ -11,6 +11,7 @@ export default {
   }),
   getRoutes: async () => {
     await api.initClient()
+    const projects = await api.getProjects()
     const skills = await api.getSkills()
     return [
       {
@@ -21,6 +22,7 @@ export default {
         path: '/resume',
         component: 'src/containers/Resume',
         getProps: () => ({
+          projects,
           skills,
         }),
       },

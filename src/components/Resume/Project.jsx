@@ -36,11 +36,11 @@ const DateBlock = styled.div`
   }
 `
 
-export default ({ title, link, description, startDate, endDate, present }) => (
+export default ({ title, github, description, startDate, endDate, present }) => (
   <Project>
     <Content>
       <Title>
-        <b>{title}</b> ~ <a href={link}>GitHub</a>
+        <b>{title}</b> ~ <a href={github}>GitHub</a>
       </Title>
 
       <Markdown content={description} />
@@ -56,7 +56,7 @@ export default ({ title, link, description, startDate, endDate, present }) => (
 /*
 {
   title: 'project3',
-  link: 'https://example3.com',
+  github: 'https://example3.com',
   description: 'guess what? `Even more markdown!!!`',
   startDate: '3/1/1',
   endDate: null,
