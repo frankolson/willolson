@@ -12,6 +12,9 @@ const Section = styled.div`
 
 const Title = styled.div`
   flex: 1;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 `
 
 const Children = styled.div`
