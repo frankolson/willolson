@@ -13,12 +13,16 @@ export default {
     await api.initClient()
     const educations = await api.getStuff('educations', api.sortByStartDate)
     const experiences = await api.getStuff('experiences', api.sortByStartDate)
+    const portfolioItems = await api.getStuff('portfolioItem')
     const projects = await api.getStuff('projects', api.sortByStartDate)
     const skills = await api.getStuff('skills')
     return [
       {
         path: '/',
         component: 'src/containers/Home',
+        getProps: () => ({
+          portfolioItems,
+        }),
       },
       {
         path: '/resume',
@@ -29,6 +33,20 @@ export default {
           projects,
           skills,
         }),
+      },
+      {
+        path: '/portfolio',
+        component: 'src/containers/Home',
+        getProps: () => ({
+          portfolioItems,
+        }),
+        children: portfolioItems.map(item => ({
+          path: `/${item.id}`,
+          component: 'src/components/Portfolio/Page',
+          getProps: () => ({
+            ...item,
+          }),
+        })),
       },
       {
         is404: true,

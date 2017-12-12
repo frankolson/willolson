@@ -1,6 +1,7 @@
 // Vendor Assets
 import React from 'react'
 import styled from 'styled-components'
+import { NavLink } from 'react-static'
 
 const Grid = styled.div`
   @media screen and (min-width: 600px) {
@@ -14,7 +15,7 @@ const Image = styled.img`
   max-width: 100%;
 `
 
-const Cell = styled.div`
+const Cell = styled(NavLink)`
   margin: 1rem;
 
   img {
@@ -34,8 +35,9 @@ const Cell = styled.div`
 export default ({ items }) => (
   <Grid>
     {items.map(item => (
-      <Cell key={item.id}>
-        <Image src={item.thumbnail} alt={item.name} />
+      <Cell key={item.id} to={`/portfolio/${item.id}`}>
+        {console.log(item.thumbnail)}
+        <Image src={item.thumbnail.fields.file.url} alt={item.name} />
       </Cell>
     ))}
   </Grid>

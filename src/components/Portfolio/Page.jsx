@@ -1,6 +1,6 @@
 // Vendor Assets
 import React from 'react'
-import { getSiteProps } from 'react-static'
+import { getRouteProps } from 'react-static'
 import styled from 'styled-components'
 
 // Project Assets
@@ -12,10 +12,10 @@ const Title = styled.div`
   color: ${white};
 `
 
-export default getSiteProps(({ name }) => (
+export default getRouteProps(({ title }) => (
   <Container>
     <Title>
-      <h1>{name}</h1>
+      <h1>{title}</h1>
     </Title>
   </Container>
 ))

@@ -1,6 +1,6 @@
 // Vendor Assets
 import React from 'react'
-import { getSiteProps } from 'react-static'
+import { getRouteProps } from 'react-static'
 import styled from 'styled-components'
 
 // Project Assets
@@ -20,7 +20,7 @@ const PortfolioHeader = styled.div`
   text-align: center;
 `
 
-export default getSiteProps(props => (
+export default getRouteProps(({ portfolioItems }) => (
   <Container>
     <ProfilePicture />
 
@@ -35,9 +35,7 @@ export default getSiteProps(props => (
         <h2>Check out some of my projects:</h2>
       </PortfolioHeader>
 
-      {console.log(props)}
-
-      <PortfolioGrid items={props.portfolioItems || []} />
+      <PortfolioGrid items={portfolioItems} />
     </div>
   </Container>
 ))
