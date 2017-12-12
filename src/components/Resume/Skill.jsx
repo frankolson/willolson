@@ -8,6 +8,7 @@ const Skill = styled.div`
 
   @media (max-width: 500px) {
     display: block;
+    margin-bottom: .5rem;
   }
 `
 
