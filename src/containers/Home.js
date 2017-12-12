@@ -20,14 +20,7 @@ const PortfolioHeader = styled.div`
   text-align: center;
 `
 
-const placeholderData = [
-  { id: 1, thumbnail: 'http://placehold.it/500x500', title: 'project1' },
-  { id: 2, thumbnail: 'http://placehold.it/500x500', title: 'project2' },
-  { id: 3, thumbnail: 'http://placehold.it/500x500', title: 'project3' },
-  { id: 4, thumbnail: 'http://placehold.it/500x500', title: 'project4' },
-]
-
-export default getSiteProps(() => (
+export default getSiteProps(props => (
   <Container>
     <ProfilePicture />
 
@@ -42,7 +35,9 @@ export default getSiteProps(() => (
         <h2>Check out some of my projects:</h2>
       </PortfolioHeader>
 
-      <PortfolioGrid items={placeholderData} />
+      {console.log(props)}
+
+      <PortfolioGrid items={props.portfolioItems || []} />
     </div>
   </Container>
 ))

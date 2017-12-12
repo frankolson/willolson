@@ -35,7 +35,7 @@ export default ({ items }) => (
   <Grid>
     {items.map(item => (
       <Cell key={item.id}>
-        <Image src={item.thumbnail} alt={item.title} />
+        <Image src={item.thumbnail} alt={item.name} />
       </Cell>
     ))}
   </Grid>
