@@ -37,7 +37,7 @@ export default ({ items }) => (
     {items.map(item => (
       <Cell key={item.id} to={`/portfolio/${item.id}`}>
         {console.log(item.thumbnail)}
-        <Image src={item.thumbnail.fields.file.url} alt={item.name} />
+        <Image src={item.thumbnail.fields.file.url} alt={item.title} />
       </Cell>
     ))}
   </Grid>
