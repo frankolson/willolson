@@ -19,6 +19,11 @@ const Title = styled.div`
   flex: 1;
 `
 
+const Description = styled.div`
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+`
+
 const DateBlock = styled.div`
   display: flex;
   flex: 1;
@@ -38,7 +43,9 @@ export default ({ position, company, description, startDate, endDate, present })
         <div>{company}</div>
       </Title>
 
-      <Markdown color={'grey'} content={description} />
+      <Description>
+        <Markdown color={'grey'} content={description} />
+      </Description>
     </Content>
 
     <DateBlock>

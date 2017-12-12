@@ -18,6 +18,11 @@ const Title = styled.div`
   flex: 1;
 `
 
+const Description = styled.div`
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+`
+
 const DateBlock = styled.div`
   display: flex;
   flex: 1;
@@ -35,7 +40,9 @@ export default ({ title, github, description, startDate, endDate, present }) => 
         <b>{title}</b> ~ <a href={github}>GitHub</a>
       </Title>
 
-      <Markdown color={'grey'} content={description} />
+      <Description>
+        <Markdown color={'grey'} content={description} />
+      </Description>
     </Content>
 
     <DateBlock>
