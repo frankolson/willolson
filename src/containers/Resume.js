@@ -11,7 +11,6 @@ import Section from '../components/Resume/Section'
 import Skill from '../components/Resume/Skill'
 import Card from '../elements/Card'
 import Container from '../elements/Container'
-import ProfilePicture from '../elements/ProfilePicture'
 import { white } from '../../utils/colors'
 
 const ResumeHeader = styled.p`
@@ -28,8 +27,6 @@ const Hr = styled.hr`
 
 export default getRouteProps(({ educations, experiences, projects, skills }) => (
   <Container>
-    <ProfilePicture />
-
     <ResumeHeader>
       Want to check out my resume? Well, here you go:
     </ResumeHeader>
