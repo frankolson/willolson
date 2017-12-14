@@ -15,8 +15,9 @@ import ProfilePicture from '../elements/ProfilePicture'
 import { white } from '../../utils/colors'
 
 const ResumeHeader = styled.p`
-  font-size: 2rem;
   color: ${white};
+  font-size: 2rem;
+  text-align: center;
 `
 
 const Hr = styled.hr`
