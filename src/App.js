@@ -16,6 +16,7 @@ injectGlobal`
     font-size: 16px;
     margin: 0;
     padding: 0;
+    padding-top: 50px;
     background: ${primary};
   }
 `
