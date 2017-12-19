@@ -4,7 +4,9 @@ import { getRouteProps } from 'react-static'
 import styled from 'styled-components'
 
 // Project Assets
+import Card from '../../elements/Card'
 import Container from '../../elements/Container'
+import Markdown from '../../elements/Markdown'
 import PortfolioHeaderPicture from '../../elements/PortfolioHeaderPicture'
 import { white } from '../../../utils/colors'
 
@@ -13,7 +15,7 @@ const Title = styled.div`
   color: ${white};
 `
 
-export default getRouteProps(({ headerImage, title }) => (
+export default getRouteProps(({ body, headerImage, title }) => (
   <Container>
     <PortfolioHeaderPicture
       alt={title}
@@ -23,5 +25,9 @@ export default getRouteProps(({ headerImage, title }) => (
     <Title>
       <h1>{title}</h1>
     </Title>
+
+    <Card>
+      <Markdown content={body} />
+    </Card>
   </Container>
 ))
