@@ -28,7 +28,7 @@ export default class NavBar extends React.Component {
 
   handleScroll = () => {
     this.setState({
-      background: window.pageYOffset === 0 ? null : 'rgba(0,0,0,0.2)',
+      background: window.pageYOffset === 0 ? null : 'rgba(0,0,0,0.5)',
     })
   }
 
