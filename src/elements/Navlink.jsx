@@ -12,10 +12,10 @@ const NewLink = styled(NavLink)`
   padding: 1rem;
   display: inline-block;
   color: ${white};
-  opacity: 0.5;
+  opacity: 0.8;
 
   &:hover {
-    opacity: 0.8;
+    opacity: 1;
   }
 
   &.active {
