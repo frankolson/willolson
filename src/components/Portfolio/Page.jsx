@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 // Project Assets
 import Container from '../../elements/Container'
+import PortfolioHeaderPicture from '../../elements/PortfolioHeaderPicture'
 import { white } from '../../../utils/colors'
 
 const Title = styled.div`
@@ -12,8 +13,13 @@ const Title = styled.div`
   color: ${white};
 `
 
-export default getRouteProps(({ title }) => (
+export default getRouteProps(({ headerImage, title }) => (
   <Container>
+    <PortfolioHeaderPicture
+      alt={title}
+      url={headerImage.fields.file.url}
+    />
+
     <Title>
       <h1>{title}</h1>
     </Title>
