@@ -3,6 +3,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { NavLink } from 'react-static'
 
+// Project Assets
+import { white } from '../../../utils/colors'
+
 const Grid = styled.div`
   @media screen and (min-width: 600px) {
     display: flex;
@@ -17,6 +20,15 @@ const Image = styled.img`
 
 const Cell = styled(NavLink)`
   margin: 1rem;
+  background: ${white};
+  border-radius: 0.25rem;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+  &:hover {
+    transform: scale(1.0125);
+  }
 
   img {
     display: block;
